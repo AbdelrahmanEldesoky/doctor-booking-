@@ -1,0 +1,106 @@
+.theme-btn{
+    display: inline-block;
+width: 280px;
+background: #033;
+height: 40px;
+margin-left: 26px;
+margin-right: 26px;
+line-height: 40px;
+text-decoration: none !important;
+border-radius: 6px;
+text-align: center;
+color: #fff !important;
+font-family: "Graphik Arabic Web Semibold";
+font-size: 16px;
+font-weight: 600;
+font-style: normal;
+font-stretch: normal;
+}
+.doctor_card ul
+{
+    list-style: none;
+    padding: 0px 10px;
+}
+
+.mt-35p{
+    margin-top:35px;
+}
+.filter_sidebar{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+min-height: 300px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+.card{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.filter_header{
+    height: 65px;
+    background: linear-gradient(90deg, rgba(59,190,220,1) 0%, rgba(170,95,212,1) 77%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding-top:8px;
+}
+
+.filter_header p{
+    font-size: 15px;
+}
+.time-format
+{
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 100;
+    color: #AA5FD4;
+}
+.home-titles{
+    padding-bottom: 40px !important;
+}
+.filter_body{
+    padding: 20px 0 20px 10px;
+}
+.filter_body .form-check{
+    font-size: 16px;
+font-weight: normal;
+margin-left:15px;
+}
+.filter_title{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.fitered_doctors_list .card-item-list{
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+border-radius: 10px;
+margin-bottom:20px;
+}
+.schedule_head{
+    height: 50px;
+background: linear-gradient(90deg, rgba(59,190,220,1) 0%, rgba(170,95,212,1) 77%);
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+color: white;
+text-align: center;
+font-size: 20px;
+padding-top: 10px;
+
+}
+
+.schedule_time{
+    cursor:pointer;
+}
+
+.stethoscop::before{
+    font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+line-height: 1;
+content: "";
+font-size: 16px;
+color: rgb(0, 112, 205);
+transform: unset;
+display: inline-block;
+font-family: "icomoon" !important;
+}

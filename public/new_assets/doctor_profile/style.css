@@ -1,0 +1,566 @@
+.doector_profile{
+    width: 27rem !important;
+    padding: 13px !important;
+}
+.doctor_brife{
+    width:18rem !important;
+
+}
+
+
+  .slider_days {
+    width: 430px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .slides_days {
+    display: flex;
+    overflow-x: auto;
+    border-radius: 5px;
+    scroll-behavior: smooth;
+    /* -webkit-overflow-scrolling: touch;
+    scroll-snap-points-x: repeat(300px); */
+    scroll-snap-type: mandatory;
+  }
+  .slides_days::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  .slides_days::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+  }
+  .slides_days::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .slides_days > div {
+    flex-shrink: 0;
+    width: 386px;
+    height: 371px;
+    border-radius: 10px;
+    /* background: #eee; */
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+  }
+  .slides_days > div:target {
+    transform: scale(0.8);
+  }
+  .author-info {
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 0.75rem;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+  }
+  .author-info a {
+    color: white;
+  }
+
+
+  .slider_days > a {
+    display: inline-flex;
+    width: 6.5rem;
+    height: 6.5rem;
+    background: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30%;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+  }
+  .slider_days > a:active {
+    top: 1px;
+  }
+  .slider_days > a:focus {
+    background: #000;
+  }
+
+     /* 1st example
+inspired from :
+- http://stackoverflow.com/questions/25573562/wrapping-a-youtube-video-in-a-static-image-frame-and-maintain-responsive-resiz
+- http://jsfiddle.net/4g9e3ywy/ */
+div.laptop-wrapper {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 67.5%;
+    height: 0;
+}
+div.laptop-wrapper iframe {
+    box-sizing: border-box;
+    background: url(https://i.stack.imgur.com/zZNgk.png) center center no-repeat;
+    background-size: contain;
+    padding: 11.9% 15.5% 14.8%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 2nd example :  BACKGROUND IMAGE */
+div.desktop-wrapper {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 67.5%;
+    height: 0;
+}
+div.desktop-wrapper iframe {
+    box-sizing: border-box;
+    background: url(http://img01.deviantart.net/05b6/i/2011/030/8/5/apple_led_cinema_screen_by_fisshy94-d38e3o5.png) center center no-repeat;
+    background-size: contain;
+    padding: 3.4% 10.8% 18.6%;/* 11.9% 15.5% 14.8% */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 3rd example :  BACKGROUND IMAGE */
+.header-unit {
+  height: 150px;
+  border: 2px solid #000;
+  border-right:none;
+  border-left: none;
+  position: relative;
+  padding: 20px;
+}
+#video-container {
+	position: absolute;
+}
+#video-container {
+	top:0%;
+	left:0%;
+	height:100%;
+	width:100%;
+	overflow: hidden;
+}
+video {
+	position:absolute;
+	z-index:0;
+}
+video.fillWidth {
+	width: 100%;
+}
+.image_card
+{
+    width: 450px;
+    height: 300px;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+/*----  Main Style  ----*/
+
+
+#cards-section .container{
+  padding-top: 40px;
+}
+#cards-section a{
+  text-decoration: none;
+  outline: none;
+}
+#cards-section .card {
+  border-radius: 8px;
+}
+#cards-section .card .text-container{
+  padding: 6px 28px;
+  text-align: center;
+}
+#cards-section .card{
+  background: #FFFFFF;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.40);
+  border-radius: 7px;
+overflow: hidden;
+height: 192px;
+margin-top: 90px;
+}
+#cards-section .card:hover{
+  box-shadow: 0px 9px 18px rgba(0, 0, 0, 0.50);
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+height: 460px;
+margin-top: 0px;
+cursor: pointer;
+}
+#cards-section .card .image-container{
+  text-align: center;
+  padding: 20px;
+}
+#cards-section .card .image-container img{
+  -webkit-transition:all 0.5s ease-in;
+  -moz-transition:all 0.5s ease-in;
+  -o-transition:all 0.5s ease-in;
+  -ms-transition:all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  height: 150px;
+  width: 150px;
+  border-radius: 150px;
+display: inline-block;
+position: relative;
+overflow: hidden;
+
+z-index:99;
+}
+#cards-section .card p{
+  font-size: 16px;
+  color: #424242;
+  font-family: "Lato";
+  margin: 6px 0px 0px 0px;
+  line-height: 25px;
+}
+#cards-section .card span{
+  font-size: 16px;
+  color: #00acc1;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#cards-section .card h6{
+  margin: 0px 0px;
+  font-size: 28px;
+  font-weight: 900;
+  font-family: 'Lato', sans-serif;
+  color: #424242;
+  line-height: 26px;
+}
+
+.image-container{
+  position: relative;
+}
+.image-container:after {
+  position: absolute;
+  content: "";
+  opacity: 0.7;
+}
+
+.social-media{
+  margin-top: 5px;
+  padding: 7px 0px 0px 0px;
+  text-align: center;
+}
+.social-media ul {
+  left: 0;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.social-media li {
+  text-align: center;
+  list-style: none;
+  display: inline-block;
+  left: 0;
+  width: 48px;
+}
+.social-media li a {
+  font-size: 21px;
+  color: #424242 !important;
+  outline: none;
+}
+/*----------MEDIA QUERIES RESPONSIVE----------*/
+@media (min-width: 320px) and (max-width: 479px){
+  .card{
+    margin: 50px 0px;
+  }
+}
+@media (min-width: 480px) and (max-width: 599px){
+  .card{
+    margin: 50px 0px;
+  }
+  #cards-section .card:hover{
+    height: 400px;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px){
+  .card{
+    margin: 50px 0px;
+  }
+  #cards-section .card:hover{
+    height: 400px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px){
+  .card{
+    margin: 50px 0px;
+  }
+  #cards-section .card:hover{
+    height: 400px;
+  }
+}
+
+
+
+
+
+
+/*##########You dont need this##########*/
+#cards-section .card-complete .text-container{
+  padding: 6px 28px;
+  text-align: center;
+}
+#cards-section .card-complete{
+  box-shadow: 0px 9px 18px rgba(0, 0, 0, 0.50);
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+/* height: 460px; */
+margin-top: 0px;
+cursor: pointer;
+}
+#cards-section .card-complete .image-container{
+  text-align: center;
+  padding: 20px;
+}
+#cards-section .card-complete .image-container img{
+  -webkit-transition:all 0.5s ease-in;
+  -moz-transition:all 0.5s ease-in;
+  -o-transition:all 0.5s ease-in;
+  -ms-transition:all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  height: 150px;
+  width: 150px;
+  border-radius: 150px;
+display: inline-block;
+position: relative;
+overflow: hidden;
+
+z-index:99;
+}
+#cards-section .card-complete p{
+
+  color: #424242;
+  margin: 6px 0px 0px 0px;
+  line-height: 25px;
+}
+#cards-section .card-complete span{
+  color: #00acc1;
+  font-weight: 600;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#cards-section .card-complete h6{
+  font-size: 28px;
+  font-weight: 900;
+  font-family: 'Lato', sans-serif;
+  color: #424242;
+  line-height: 26px;
+}
+#cards-section .card-complete{
+  border-radius: 8px;
+  overflow: hidden;
+}
+.image-container{
+  position: relative;
+}
+.image-container:after {
+  position: absolute;
+  content: "";
+  opacity: 0.7;
+}
+#cards-section .card-complete .image-container:after{
+  -webkit-transition:all 0.5s ease-in;
+  -moz-transition:all 0.5s ease-in;
+  -o-transition:all 0.5s ease-in;
+  -ms-transition:all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  width: 120%;
+  top: -90px;
+  height: 210px;
+  border-radius: 50%;
+  background-color: #6157A0 ;
+  z-index:0;
+  left: -10%;
+}
+/*----------MEDIA QUERIES RESPONSIVE----------*/
+@media (min-width: 320px) and (max-width: 479px){
+  .card-complete{
+    margin: 50px 0px;
+  }
+}
+@media (min-width: 480px) and (max-width: 599px){
+  .card-complete{
+    margin: 50px 0px;
+  }
+  #cards-section .card-complete{
+    height: 400px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+  .card-complete{
+    margin: 50px 0px;
+  }
+  #cards-section .card-complete{
+    height: 400px;
+  }
+}
+
+
+
+
+.time_list{
+    position: relative;
+    display: block;
+    width: 400px;
+    height: 100%;
+    min-height: 350px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    border-radius: 10px;
+    z-index: 0;
+  }
+  .time_list h2
+  {
+    display: block;
+    width: auto;
+    font-size: 1.5rem;
+    padding: 0.6rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #eee;
+    text-align: center;
+  }
+  .time_list .date_input_container
+  {
+    display: block;
+    position: absolute;
+    z-index: 1200;
+    top: 0;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background-color: #eee;
+    padding: 2rem;
+    opacity: 0;
+    transition: all .3s;
+  }
+  .time_list .date_input_container.show{
+    right: 0% !important;
+    opacity: 1;
+  }
+  .date_input_container button
+  {
+        margin-bottom: 2px;;
+  }
+  .save{
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0
+  }
+  .time_list .date_input_container label
+  {
+    margin-top: 50px;
+  }
+  .swiper {
+        width: 100%;
+        /* height: 100%; */
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+  .time_link
+  {
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  .time_list .btn
+  {
+    box-shadow: none;
+    border-radius: 0px
+  }
+.carousel-item{
+    width: 75%;
+    height: 350px;
+}
+.carousel-item img{
+    width: 100%;
+    height: 100%;
+}
+.carousel-control-prev-icon{
+    color: black !important;
+
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br{
+    width: 25% !important;
+}
+.ui-datepicker .ui-datepicker-header
+{
+    width: 100% !important;
+}
+.ui-datepicker .ui-datepicker-header {
+    position: relative !important;
+    padding: .2em 0 !important;
+    background: #6157A0 !important;
+    color: #ffff !important;
+}
+.doctor_clinc{
+    border-radius: 15% !important;
+}
+.testimonials .testimonial-item
+{
+    width: 247px;
+    height: 126px;
+}
+
+
+@media (min-width:481px) and (max-width: 1023px) {
+    .card-complete{
+      margin: 50px 0px;
+    }
+    #cards-section .card-complete{
+      height: 400px;
+    }
+    #cards-section .card-complete .image-container img{
+      height: 107px !important;
+      width: 105px !important;
+  }
+  #cards-section .card-complete .image-container{
+    padding: 0px;
+  }
+  #cards-section .card-complete span{
+    font-size: 15px;
+  }
+  #cards-section .card-complete p {
+    margin: 0px;
+    line-height: 20px;
+  }
+  #cards-section .container {
+padding: 0px;
+  }
+  }

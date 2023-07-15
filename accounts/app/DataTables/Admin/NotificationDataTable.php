@@ -1,0 +1,140 @@
+<?php
+
+namespace App\DataTables\Admin;
+
+use App\Models\DoctorLog;
+use Yajra\DataTables\Html\Column;
+use Yajra\DataTables\Services\DataTable;
+use Illuminate\Support\Facades\Auth;
+
+class NotificationDataTable extends DataTable
+{
+    protected $date;
+
+    public function __construct()
+    {
+        $this->date = session('date');
+    }
+    /**
+     * Build DataTable class.
+     *
+     * @param mixed $query Results from query() method.
+     * @return \Yajra\DataTables\DataTableAbstract
+     * @throws \Yajra\DataTables\Exceptions\Exception
+     */
+    public function dataTable($query)
+    {
+        return datatables()
+            ->eloquent($query)
+            ->editColumn('user', function ($query) {
+                return $query->doctor->name;
+            })
+            ->filterColumn('user', function($query, $keyword) {
+                return $query->orWhereHas('doctor', function($q) use($keyword) {
+                    $q->where('name', 'like', "%{$keyword}%");
+                });
+            })
+            ->editColumn('action', function ($query) {
+                return '<a href="'.route('admin.notifications.show',$query->id).'" class="btn btn-success">Show</a>';
+            })
+            ->rawColumns(['action','user']);
+
+    }
+
+    /**
+     * Get query source of dataTable.
+     *
+     * @param \App\Models\Rating $model
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function query()
+    {
+        $model = DoctorLog::query();
+     
+        return $this->applyScopes($model);
+    }
+
+    /**
+     * Optional method if you want to use html builder.
+     *
+     * @return \Yajra\DataTables\Html\Builder
+     */
+    public function html()
+    {
+        return $this->builder()
+            ->setTableId('dataTable')
+            ->columns($this->getColumns())
+            ->minifiedAjax()
+            ->dom('<"row align-items-center"<"col-md-2" l><"col-md-6" B><"col-md-4"f>><"table-responsive my-3" rt><"row align-items-center" <"col-md-6" i><"col-md-6" p>><"clear">')
+            ->parameters([
+                "buttons" => [
+                ],
+                "processing" => true,
+                "autoWidth" => false,
+                'initComplete' => "function () {
+                            $('.dt-buttons').addClass('btn-group btn-group-sm')
+                            this.api().columns().every(function (colIndex) {
+                                var column = this;
+                                var input = document.createElement(\"input\");
+                                input.className = \"form-control form-control-sm h-3\";
+                                $(input).appendTo($(column.footer()).empty())
+                                .on('keyup change', function () {
+                                    var val = $.fn.dataTable.util.escapeRegex($(this).val());
+                                    column.search(val ? val : '', false, false, true).draw();
+                                });
+
+                                $('#dataTable thead').append($('#dataTable tfoot tr'));
+                            });
+
+
+                        }",
+                'drawCallback' => "function () {
+                        }"
+            ]);
+    }
+
+    /**
+     * Get columns.
+     *
+     * @return array
+     */
+    protected function getColumns()
+    {
+        return [
+            ['data' => 'id', 'name' => 'id', 'title' => 'Id', 'orderable' => false],
+            ['data' => 'user', 'name' => 'user', 'title' => 'User', 'orderable' => false],
+            ['data' => 'type', 'name' => 'type', 'title' => 'Type', 'orderable' => false],
+            Column::computed('action')
+            ->exportable(false)
+            ->printable(false)
+            ->searchable(false)
+            ->width(60)
+            ->addClass('text-center hide-search'),
+        ];
+    }
+
+//    /**
+//     * Get filename for export.
+//     *
+//     * @return string
+//     */
+//    protected function filename()
+//    {
+//        return 'Categories_' . date('YmdHis');
+//    }
+
+    public function excel()
+    {
+        // TODO: Implement excel() method.
+    }
+
+    public function csv()
+    {
+        // TODO: Implement csv() method.
+    }
+
+    public function pdf()
+    {
+        // TODO: Implement pdf() method.
+    }
+}

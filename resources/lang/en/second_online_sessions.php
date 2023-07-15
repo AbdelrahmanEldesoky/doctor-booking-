@@ -1,0 +1,27 @@
+<?php
+
+return[
+'home'=>'Online Sessions',
+'brief'=>'Now through ipersona you can book your session online with ease and in the fastest time',
+''=>'',
+''=>'',
+''=>'',
+''=>'',
+''=>'',
+''=>'',
+''=>'',
+''=>'',
+''=>'',
+''=>'',
+''=>'',
+''=>'',
+''=>'',
+''=>'',
+''=>'',
+''=>'',
+''=>'',
+''=>'',
+''=>'',
+''=>'',
+    ''=>'',
+];

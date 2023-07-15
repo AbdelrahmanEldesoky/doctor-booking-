@@ -1,0 +1,50 @@
+*{
+    direction: ltr;
+    font-family: 'Times New Roman', Times, serif;
+}
+.explanation_of_conditions_and_conditions{
+    text-align: left;
+}
+.title_bold{
+    font-family: 'Vina Sans', cursive !important;
+}
+.title_bold_two{
+    font-family: 'Vina Sans', cursive !important;
+}
+.session_clinic,.btn-get-started{
+    font-size: 1.2rem !important;}
+
+.title_link{
+    font-family: 'Vina Sans', cursive !important;
+    font-weight: normal !important;
+}
+@media (max-width: 767px) {
+
+    .header {
+    position: fixed ;
+    top: 90% !important;
+    width: 100% ;
+    left: 5%;
+}
+    .login, .header .logo img {
+        /* top: 15px; */
+        position: fixed;
+        margin: auto;
+        right: 96%;
+        width: 29% !important;
+    }
+    .navbar a, .navbar a:focus {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* padding: 0 3px; */
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 12px;
+        font-weight: 600;
+        /* color: rgba(255, 255, 255, 0.6); */
+        white-space: nowrap;
+        transition: 0.3s;
+        position: relative;
+        margin-left: 1px !important;
+    }
+}

@@ -1,0 +1,20 @@
+*{
+    direction: rtl;
+}
+.login{
+    margin-left: 22px;
+}
+.fa-solid{
+    padding: 4px !important;
+}
+.explanation_of_conditions_and_conditions{
+    text-align: right;
+}
+.explanation_of_conditions_and_conditions  p
+,.explanation_of_conditions_and_conditions li {
+    font-family: 'Lateef', serif;
+    font-size: 20px;
+}
+
+
+

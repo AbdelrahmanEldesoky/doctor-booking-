@@ -1,0 +1,87 @@
+/* ! ||--------------------------------------------------------------------------------*/
+/* ! ||                                     Arabic                                    */
+/* ! ||--------------------------------------------------------------------------------*/
+@media (min-width: 120px) and (max-width: 800px) {
+    .add-to-cart {
+        font-size: 10px;
+    }
+    .d-flex button {
+        font-size: 11px;
+    }
+    .btn_login {
+        font-size: 18px !important;
+    }
+
+    .search {
+        width: 75% !important;
+    }
+    .navbar a,
+    .navbar a:focus {
+        font-size: 12px !important;
+    }
+    .hero .btn-get-started,
+    .hero .btn-watch-video {
+        font-size: 1.8rem !important;
+    }
+    .image_home {
+        display: block !important;
+    }
+    .btn_logout,
+    .btn_login {
+        margin-right: -15px;
+    }
+    .scroll-top {
+        bottom: 6px !important;
+        right: 1px !important;
+    }
+    .sch_box_3 .swiper .swiper-slide {
+        width: 330px !important;
+    }
+
+    .sch_box_3 .swiper .swiper-slide a {
+        font-size: 1.1rem !important;
+    }
+
+    .testimonials .testimonial-item {
+        padding: 16px !important;
+    }
+    .time_list .date_input_container {
+        left: 72px !important;
+    }
+    .time_list .btn {
+        margin: auto !important;
+    }
+    #ui-datepicker-div {
+        width: 93% !important;
+        left: 10px !important;
+    }
+    .hero {
+        padding: 0px 0 0 0 !important;
+    }
+    .footer-contact p {
+        font-size: 13px;
+    }
+    #cards-section .container {
+        padding-top: 0px !important;
+    }
+    .swiper-css-mode > .swiper-wrapper > .swiper-slide_doctor {
+        width: 327px !important;
+    }
+    .time_list_doctor {
+        width: 324px !important;
+    }
+    .sticked-header-offset {
+        margin-top: 0px !important;
+    }
+    .header.sticked {
+        right: 0px !important;
+        left: 0 !important;
+        height: 53px !important;
+    }
+    .teable_sessions_user {
+        margin-right: -33px !important;
+    }
+    .input:valid{
+        text-align: center;
+    }
+}

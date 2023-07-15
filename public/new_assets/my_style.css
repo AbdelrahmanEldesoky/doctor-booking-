@@ -1,0 +1,388 @@
+.we {
+    font-family: 'Jomhuria', cursive;
+    font-family: 'Lateef', serif !important;
+}
+.about_us_title{
+    font-family: 'Jomhuria', cursive;
+}
+.about_us_info{
+    font-family: 'Amiri', serif;
+}
+
+
+
+
+
+#exTab1 .tab-content {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+
+#exTab2 h3 {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+
+/* remove border radius for the tab */
+
+#exTab1 .nav-pills > li > a {
+  border-radius: 0;
+}
+
+/* change border radius for the tab , apply corners on top*/
+
+#exTab3 .nav-pills > li > a {
+  border-radius: 4px 4px 0 0 ;
+}
+
+#exTab3 .tab-content {
+  color : white;
+  padding : 5px 15px;
+}
+
+
+
+
+
+
+
+  .form_card {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .form_card .form-row {
+    display: block;
+    margin: 20px 0;
+  }
+  .form_card .select {
+    display: block;
+    position: relative;
+    vertical-align: middle;
+  }
+  .form_card .select > span {
+    display: block;
+    color: #636363;
+  }
+  .form_card .select > input {
+    display: block;
+    cursor: pointer;
+    margin: 0;
+    padding: 10px 20px;
+    width: 100%;
+    border: 1px solid #bdbdbd;
+    border-radius: 3px;
+    line-height: 16px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+    user-select: none;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%);
+    background-position: calc(100% - 20px) center, calc(100% - 15px) center;
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out, color 300ms ease-in-out;
+  }
+  .form_card .select > input:hover, form .select > input:focus, form .select > input:active, form .select > input.active {
+    border-color: #069;
+  }
+  .form_card .select > input:focus, form .select > input:active, form .select > input.active {
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
+  }
+  .form_card .select > input:focus ~ ul, form .select > input:active ~ ul {
+    max-height: 200px;
+    z-index: 999;
+  }
+  .form_card .select > ul {
+    display: block;
+    position: absolute;
+    list-style: none;
+    overflow: hidden;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-top: none;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    left: 20px;
+    right: 20px;
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    max-height: 0;
+    z-index: 998;
+    transition: max-height 300ms ease-in-out;
+  }
+  .form_card .select > ul li {
+    display: block;
+    cursor: pointer;
+    margin: 0;
+    padding: 5px 10px;
+    background-color: #fff;
+    color: black;
+    font-family: 'Lateef', serif;
+    font-size: 1.5rem;
+  }
+  .form_card .select > ul li:hover {
+    background-color: #f2f2f2;
+  }
+  .form_card .select > ul li:focus, form .select > ul li:active, form .select > ul li.active {
+    background-color: #f0f0f0;
+  }
+  .form_card .select > ul li + li {
+    border-top: 1px solid #d7d7d7;
+  }
+  .form_card .select > select {
+    display: inline-block;
+    position: absolute;
+    overflow: hidden;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+    opacity: 0.000000001;
+  }
+.purple {
+    background-color: #6157a0 !important;
+}
+.purple_two{
+    background-color: #c1b6e3 !important;
+}
+.text_purple{
+    color: #6157a0;
+}
+.border_purple{
+    border: 1px solid #6157a0 !important;
+}
+.border_purple:hover{
+    background-color: #00ACA3 !important;
+}
+.border_purple a:hover{
+    color: black !important;
+
+}
+.pp:hover{
+    background-attachment: none !important ;
+}
+.btn_purple{
+    border: 0;
+    padding: 14px 45px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+/**
+for animation  home page */
+
+:root {
+    --penguin-size: 300px;
+    --penguin-skin: #6157a0 ;
+    --penguin-belly: white;
+    --penguin-beak: orange;
+  }
+
+  @media (max-width: 350px) {
+    :root {
+      /* Only change code below this line */
+
+      /* Only change code above this line */
+    }
+  }
+
+  .penguin {
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+    width: var(--penguin-size, 300px);
+    height: var(--penguin-size, 300px);
+  }
+
+  .right-cheek {
+    top: 15%;
+    left: 35%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .left-cheek {
+    top: 15%;
+    left: 5%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .belly {
+    top: 60%;
+    left: 2.5%;
+    background: var(--penguin-belly, white);
+    width: 95%;
+    height: 100%;
+    border-radius: 120% 120% 100% 100%;
+  }
+
+  .penguin-top {
+    top: 10%;
+    left: 25%;
+    background: #6157a0 ;
+    width: 50%;
+    height: 45%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .penguin-bottom {
+    top: 40%;
+    left: 23.5%;
+    background: #6157a0 ;
+    width: 53%;
+    height: 45%;
+    border-radius: 70% 70% 100% 100%;
+  }
+
+  .right-hand {
+    top: 5%;
+    left: 25%;
+    background: var(--penguin-skin, black);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 120% 30%;
+    transform: rotate(130deg);
+    z-index: -1;
+    animation-duration: 3s;
+    animation-name: wave;
+    animation-iteration-count: infinite;
+    transform-origin:0% 0%;
+    animation-timing-function: linear;
+  }
+
+  @keyframes wave {
+      10% {
+        transform: rotate(110deg);
+      }
+      20% {
+        transform: rotate(130deg);
+      }
+      30% {
+        transform: rotate(110deg);
+      }
+      40% {
+        transform: rotate(130deg);
+      }
+    }
+
+  .left-hand {
+    top: 0%;
+    left: 75%;
+    background: #6157a0 ;
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 30% 120%;
+    transform: rotate(-45deg);
+    z-index: -1;
+  }
+
+  .right-feet {
+    top: 85%;
+    left: 60%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(-80deg);
+    z-index: -2222;
+  }
+
+  .left-feet {
+    top: 85%;
+    left: 25%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(80deg);
+    z-index: -2222;
+  }
+
+  .right-eye {
+    top: 45%;
+    left: 60%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+  }
+
+  .left-eye {
+    top: 45%;
+    left: 25%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+  }
+
+  .sparkle {
+    top: 25%;
+    left:-23%;
+    background: white;
+    width: 150%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .blush-right {
+    top: 65%;
+    left: 15%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .blush-left {
+    top: 65%;
+    left: 70%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .beak-top {
+    top: 60%;
+    left: 40%;
+    background: var(--penguin-beak, orange);
+    width: 20%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .beak-bottom {
+    top: 65%;
+    left: 42%;
+    background: var(--penguin-beak, orange);
+    width: 16%;
+    height: 10%;
+    border-radius: 50%;
+  }
+  .penguin * {
+    position: absolute;
+  }
+.rate
+{
+    margin-top: 50px !important;
+
+}
+.mano{
+    font-size: 1.7rem ;
+}
+.inbut_bor{
+    border: 1px solid #ced4da !important;
+}

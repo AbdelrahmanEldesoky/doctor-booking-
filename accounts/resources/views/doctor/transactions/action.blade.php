@@ -1,0 +1,1 @@
+<a href="{{route('doctor.payments.show',$id)}}"><i class="fa fa-eye btn btn-primary"></i></a>

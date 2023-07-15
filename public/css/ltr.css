@@ -1,0 +1,98 @@
+/* ! ||--------------------------------------------------------------------------------*/
+/* ! ||                                     english                                    */
+/* ! ||--------------------------------------------------------------------------------*/
+@media (min-width: 120px) and (max-width: 800px) {
+    .container-fluid {
+        margin-left: 28px !important;
+        margin-bottom: 13px !important;
+    }
+    .d-flex button,
+    .d-flex a {
+        font-size: 9px !important;
+    }
+
+    .search {
+        width: 75% !important;
+    }
+    .d-flex a {
+        font-size: 15px;
+    }
+
+    .search {
+        width: 75% !important;
+    }
+
+    .navbar a,
+    .navbar a:focus {
+        font-size: 11px !important;
+    }
+
+    .btn_purple {
+        margin-left: -37px !important;
+    }
+    .hero .icon-box .title a {
+        font-size: 15px;
+    }
+    .mano {
+        font-size: 1rem !important;
+    }
+    .hero .btn-get-started,
+    .hero .btn-watch-video {
+        font-size: 1.8rem !important;
+    }
+    .image_home {
+        display: block !important;
+    }
+    /* .scroll-top{
+                    bottom: 6px !important;
+                    left: 1px !important;
+                } */
+    #cards-section .card-complete h6 {
+        font-size: 17px;
+    }
+    .login_mob .btn {
+        font-size: 18px !important;
+    }
+
+    .sch_box_3 .swiper .swiper-slide {
+        width: 330px !important;
+    }
+
+    .sch_box_3 .swiper .swiper-slide a {
+        font-size: 0.8rem !important;
+    }
+
+    .time_list .date_input_container.show {
+        right: 16% !important ;
+    }
+    .testimonials .testimonial-item {
+        padding: 16px !important;
+    }
+    .hero {
+        padding: 0px 0 0 0 !important;
+    }
+    #cards-section .container{
+        padding-top: 0px !important;
+    }
+    .swiper-css-mode>.swiper-wrapper>.swiper-slide_doctor{
+        width: 327px !important;
+    }
+    .time_list_doctor{
+        width: 324px !important;
+}
+.sticked-header-offset{
+    margin-top: 0px !important;
+}
+
+
+.teable_sessions_user{
+
+padding: 5px;
+font-size: 8px;
+margin-left: -34px !important;
+}
+.input:valid{
+    text-align: center;
+}
+
+}

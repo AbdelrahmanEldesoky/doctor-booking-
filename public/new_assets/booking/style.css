@@ -1,0 +1,96 @@
+
+
+
+.home_page_link,
+.reservation_link,
+.about_us_link,
+.our_team_link,
+.connect_link
+{
+    display: none;
+};
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.about {
+  padding: 20px;
+
+  margin: 40px auto;
+}
+.about ul {
+  margin-bottom: 10px;
+}
+.about ul li ,.about ul li.active {
+    list-style: none;
+    padding: 8px 0px;
+    margin: 0px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.about .product {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about .product .itemsbox {
+  position: relative;
+  /* width: 300px;
+  height: 200px; */
+  margin: 5px;
+}
+.about .product .itemsbox img {
+  position: inherit;
+  top: 0;
+  left: 0;
+  width: 317px;
+}
+
+
+.swiper-wrapper{
+    height: 50% !important;
+}
+
+.fill {
+    color: #FFD700;
+}
+.append-card-img img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    border: 2px solid #3da8c0;
+    padding: 2px;
+    box-shadow: 0 0 6px #3da8c04d;
+}
+.appoint_detail {
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.hide {
+    display: none;
+}
+.h4,h4 {
+    font-size: calc(1.275rem + .3vw)
+}
+    .card-site
+{
+  width: 100%;
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0px 5px 20px rgb(34 35 58 / 15%);
+  padding: 25px;
+  border-radius: 25px;
+  transition: all .3s;
+  border: 0px;
+}

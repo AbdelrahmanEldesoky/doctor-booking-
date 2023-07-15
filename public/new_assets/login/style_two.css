@@ -1,0 +1,44 @@
+@media (min-width: 120px) and (max-width: 800px) {
+    .select_country {
+        margin-left: 79px;
+        width: 97px !important;
+    }
+
+    .input_45 {
+        width: 45% !important;
+    }
+
+    .left_45 {
+        margin-left: -52px !important;
+    }
+
+    .chk_two {
+        font-size: 2.1em !important;
+    }
+
+    .login_icon {
+        width: 27% !important;
+    }
+
+    .login {
+        width: 100% !important;
+        height: 531px !important;
+        bottom: -581px !important;
+        position: fixed !important;
+    }
+
+    .main {
+        width: 800px !important;
+        /* height: 800px !important; */
+
+    }
+
+    .chk_two_login {
+        margin: 25px 75px -7px 59px !important;
+    }
+
+    .mina {
+        margin-top: -32px;
+    }
+
+}
