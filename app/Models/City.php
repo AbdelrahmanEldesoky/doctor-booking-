@@ -12,10 +12,15 @@ class City extends Model
 
 
 
+    public function scopeCitys($query)
+    {
+        return $query->select('id', 'name_' . app()->getLocale(). ' as name_city');
+
+    }
     public function getNameAttribute()
     {
            $key = 'name_'.Config::get('app.locale');
             return $this->$key;
-        
+
     }
 }

@@ -45,7 +45,7 @@ Route::as('user.')->prefix('user')->group(function () {
     Route::post('/password/update', [UserController::class, 'password']);
 });
 Route::as('doctor.')->prefix('doctor')->group(function () {
-    Route::get('/search', [DoctorController::class, 'search'])->name('search');
+ //   Route::get('/search', [DoctorController::class, 'search'])->name('search');
     Route::post('/register', [UserController::class, 'doctorRegister']);
     Route::post('/appointment', [DoctorController::class, 'appointment']);
     Route::get('/show/{id}', [DoctorController::class, 'show']);

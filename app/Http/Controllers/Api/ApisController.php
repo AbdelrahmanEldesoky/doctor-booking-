@@ -82,15 +82,17 @@ class ApisController extends Controller
 
     public function search(Request $request)
     {
-        $data = $request->all();
-        Session::forget('is_telehealth');
-        Session::forget('tab');
-        Session::forget('is_area');
-        $specialities = Speciality::get();
+       // $data = $request->all();
+      //  Session::forget('is_telehealth');
+      //  Session::forget('tab');
+      //  Session::forget('is_area');
+        $specialities = Speciality::specialities()->get();
         $countries = Country::get();
-        $cities = City::get();
+        $cities = City::citys()->get();
         $selectedAreas = [];
-        $doctors = User::with(['schedules', 'information', 'specialities'])->where('is_show', 1)->where('role', 'doctor')->where('status', '1')
+        $doctors = User::with(['schedules', 'information', 'specialities'])
+        ->where('is_show', 1)->selection()
+        ->where('role', 'doctor')->where('status', '1')
             ->when($request->name, function ($query) use ($request) {
                 $query->where(function ($q) use ($request) {
                     $q->orWhere('name', 'LIKE', '%' . $request->name . '%')
@@ -115,13 +117,11 @@ class ApisController extends Controller
                 $query->whereHas('information', function ($que) use ($request) {
                     $que->where('gender', $request->gender);
                 });
-            })
-            ->when($request->availability, function ($query) use ($request) {
+            })->when($request->availability, function ($query) use ($request) {
                 $query->whereHas('schedules', function ($que) use ($request) {
                     $que->where('schedule_type', $request->availability)->where('status', 'available');
                 });
-            })
-            ->when($request->entity && $request->entity == 'hospital', function ($query) use ($request) {
+            })->when($request->entity && $request->entity == 'hospital', function ($query) use ($request) {
                 $query->whereHas('information', function ($que) use ($request) {
                     $que->where('hospital', '!=', null);
                 });
@@ -139,14 +139,12 @@ class ApisController extends Controller
                 $query->whereHas('schedules', function ($que) use ($request) {
                     $que->where('schedule_type', 'online');
                 });
-            })
-            ->when(!$request->telehealth, function ($query) use ($request) {
+            })->when(!$request->telehealth, function ($query) use ($request) {
                 Session::put('tab', 'offline');
                 $query->whereHas('schedules', function ($que) use ($request) {
                     $que->where('schedule_type', 'ofline');
                 });
-            })
-            ->when($request->sort, function ($query) use ($request) {
+            })->when($request->sort, function ($query) use ($request) {
                 $query->when($request->sort == 'high' || $request->sort == 'low', function ($quee) use ($request) {
                     $order = $request->sort == 'high' ? 'asc' : 'desc';
                     $quee->when($request->telehealth, function ($q) use ($request, $order) {
@@ -168,32 +166,28 @@ class ApisController extends Controller
                         $q->select(DB::raw('coalesce(avg(rating),0)'));
                     }])->orderByDesc('average_rating');
                 });
-            });
+            })->get();
 
-        $doctors = !$request->sort ? $doctors->inRandomOrder()->paginate(10) : $doctors->paginate(10);
+   //     $doctors = !$request->sort ? $doctors->inRandomOrder()->paginate(10) : $doctors->paginate(10);
 
-        $suggestDoctors = $this->getRelatedDocs();
-        $addDoctors = User::where('is_add', 1)->where('is_show', 1)->take(2)->get();
+    //    $suggestDoctors = $this->getRelatedDocs();
+       // $addDoctors = User::where('is_add', 1)->where('is_show', 1)->take(2)->get();
 
-        if ($request->ajax()) {
 
-            $view = view('frontend.components.appendDoctors2', get_defined_vars())->render();
-            return response()->json(['html' => $view]);
-        }
 
         if ($request->city_id) {
-            $selectedAreas = Area::where('city_id', $request->city_id)->get();
+            $selectedAreas = Area::areas()->where('city_id', $request->city_id)->get();
         }
-        $doctors->appends(['area_id' => $request->area_id, 'name' => $request->name]);
+      //
 
         return response()->json([
-            'status'        => true,
             'msg'           => "Success",
+            'status'        => true,
             'data'          =>
             [
-                'data'              =>  $data,
-                'suggestDoctors'    =>  $suggestDoctors,
-                'addDoctors'        =>  $addDoctors,
+        //        'data'              =>  $data,
+        //        'suggestDoctors'    =>  $suggestDoctors,
+         //       'addDoctors'        =>  $addDoctors,
                 'doctors'           =>  $doctors,
                 'specialities'      =>  $specialities,
                 'countries'         =>  $countries,

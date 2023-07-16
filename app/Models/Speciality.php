@@ -32,6 +32,15 @@ class Speciality extends Model
     {
            $key = 'name_'.Config::get('app.locale');
             return $this->$key;
-        
+
     }
+
+    public function scopeSpecialities($query)
+    {
+        return $query->select('id', 'name_' . app()->getLocale(). ' as name_specialities','image','status');
+
+    }
+
+
+
 }

@@ -24,6 +24,12 @@ class Area extends Model
     {
            $key = 'name_'.Config::get('app.locale');
             return $this->$key;
-        
+
+    }
+
+    public function scopeAreas($query)
+    {
+        return $query->select('id', 'name_' . app()->getLocale(). ' as name_areas');
+
     }
 }
