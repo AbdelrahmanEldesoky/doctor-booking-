@@ -4,7 +4,6 @@ Doctor Booking is a web application that allows users to search for and book app
 Installation
 To install Doctor Booking, follow these steps:
 
-Clone the repository to your local machine using git clone https://github.com/AbdelrahmanEldesoky/doctor-booking.git.
 Install the required dependencies using composer install.
 Create a new database for the application.
 Copy the .env.example file to .env, and update the database configuration settings in the .env file.
@@ -12,7 +11,7 @@ Generate a new application key using php artisan key:generate.
 Run the database migrations using php artisan migrate.
 Seed the database with sample data using php artisan db:seed.
 Usage
-To use Doctor Booking, simply visit the website at [INSERT URL HERE]. You can search for doctors by specialty or location, and view their availability and qualifications. Once you have found a doctor that you would like to see, you can book an appointment online and pay for the appointment using Visa, cash, or another supported payment method.
+To use Doctor Booking, simply visit the website at https://ipersona.me/ar. You can search for doctors by specialty or location, and view their availability and qualifications. Once you have found a doctor that you would like to see, you can book an appointment online and pay for the appointment using Visa, cash, or another supported payment method.
 
 You can also send messages to your healthcare provider through the web application, to ask questions, share information, or request a prescription refill.
 
